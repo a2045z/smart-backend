@@ -17,10 +17,7 @@ ip=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' smart.mongo)
 
 docker run --rm \
   -e MONGO_URL=mongodb://$ip:27017/smart \
-  -it \
+  -d \
   --name smart-api-server \
-  -w /code \
-  -v $base:/code \
   -p $port:$port \
-  mhart/alpine-node:8.2.1 \
-  sh -c "yarn && yarn nodemon server.js"
+  smart-api:0.0.1

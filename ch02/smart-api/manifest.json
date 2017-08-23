@@ -1,0 +1,14 @@
+{
+  "connections": [{ "port": 4000 }],
+  "registrations": [
+    {
+      "plugin": "./plugins/api/user"
+    },
+    {
+      "plugin": "./plugins/api/session"
+    },
+    {
+      "plugin": "./plugins/db/mongo"
+    }
+  ]
+}

@@ -17,7 +17,6 @@ ip=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' smart.mongo)
 
 docker run --rm \
   -e MONGO_URL=mongodb://$ip:27017/smart \
-  -it \
   --name smart-api-server \
   -w /code \
   -v $base:/code \
