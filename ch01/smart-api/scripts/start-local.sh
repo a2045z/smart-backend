@@ -1,6 +1,6 @@
 #!/bin/bash
 
-base=$(realpath -- "$(dirname -- $0)/..")
+base=$(realpath "$(dirname -- $0)/..")
 
 dbpath=$base/db
 mkdir -p $dbpath
